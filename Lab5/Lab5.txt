@@ -1,0 +1,238 @@
+Nikhil and darren
+CS612 - Lab 5
+
+1) For two binary data:
+i. Hamming distance = number of different bits between the two vectors
+ii. Jaccard Similarity = J = (number of matching presences) / (number of attributes not involved in the 00 matches
+iii. The Simple Matching Coefficient (SMC) distance is: Hamming distance / number of bits.
+
+Compute the Hamming distance, the Jaccard similarity, and SMC  between the following three binary vectors.
+       X1 = 1111010001
+       Y1 = 0100011000
+       
+	Ans. Hamming distance = f01 + f10  = 1 + 4
+        Hamming distance = 5
+
+                        SMC = (f00 + f11) / ( f01 + f11 + f10  + f00)
+                                 = (3+2) / (1+2+4+3)
+		 = 5 / 10
+  	        SMC = 0.5
+
+                        Jaccard similarity = (number of matching presences) / (number of attributes not involved in the 00 matches)
+ 	        J = (f11) / (f01 + f10  + f11)
+	        
+                        f01 = 1    the no. of attributes where x was 0 and y was 1
+	        f10 = 4     the no. of attributes where x was 1 and y was 0
+	            f00 = 3     the no. of attributes where x was 0 and y was 0
+	            f11 = 2     the no. of attributes where x was 1 and y was 1
+                        
+                        J = (2) / (1 + 4 + 2) = 2/7 = 0.285
+                        J = 0.285
+-----------------------------------------------------------------------------------------------------------------------------
+
+       X2 = 1101110001
+       Y2 = 0110011100
+       
+       Ans.  Hamming distance = f01 + f10  = 3 + 4
+         Hamming distance = 7
+                
+                         SMC = (f00 + f11) / ( f01 + f11 + f10  + f00)
+		  = (1+2) / (3+2+4+1)
+ 	                  = 3 / 10 
+	         SMC = 0.3 
+
+	         Jaccard similarity = (number of matching presences) / (number of attributes not involved in the 00 matches)
+ 	        J = (f11) / (f01 + f10  + f11) 
+                        f01 = 3    the no. of attributes where x was 0 and y was 1
+	        f10 = 4     the no. of attributes where x was 1 and y was 0
+	            f00 = 1    the no. of attributes where x was 0 and y was 0
+	            f11 = 2     the no. of attributes where x was 1 and y was 1
+
+                       J = (2) / (3 + 4 + 2) = 2/9 = 0.22
+                       J = 0.22
+-------------------------------------------------------------------------------------------------------------------
+       
+       X3 = 1111110001
+       Y3 = 1110011100
+       
+	Ans. Hamming distance = f01 + f10  = 2 + 3 
+                Hamming distance = 5
+	       
+                SMC = (f00 + f11) / ( f01 + f11 + f10  + f00)
+       	  = (1+4) / (2+4+3+1)
+                         = 5 / 10 
+                SMC = 0.5
+
+	         Jaccard similarity = (number of matching presences) / (number of attributes not involved in the 00 matches)
+ 	        J = (f11) / (f01 + f10  + f11)
+                        f01 = 2    the no. of attributes where x was 0 and y was 1
+	        f10 = 3     the no. of attributes where x was 1 and y was 0
+	            f00 = 1     the no. of attributes where x was 0 and y was 0
+	            f11 = 4     the no. of attributes where x was 1 and y was 1
+
+	        J = (4) / (2 + 3 + 4) = 4 / 9
+                        J = 0.4
+
+2) For the following vectors, x and y, calculate the indicated similarity or distance measures.
+1.  x = (1, 1, 1, 1), y = (2, 2, 2, 2) cosine, correlation, Euclidean
+Ans.
+	Cosine :-
+		X. Y = 1*2 + 1*2 + 1*2 + 1*2 = 8
+		Size of x = sqrt(1*1 + 1*1 + 1*1 + 1*1) = sqrt(4) = 2
+		Size of y = sqrt(2*2 + 2*2 + 2*2 + 2*2) = sqrt(16) = 4
+		cos(x,y) = (X. Y / (size of x * size of y) = (8) / (2*4)
+		cos(x,y) = 1		
+
+	Correlation :- 
+		corr(x,y) = [covariance(x,y)] / [standard deviation(x) * standard deviation(y)]
+		Mean of x = (1+1+1+1) / 4 = 1
+		Mean of y = (2+2+2+2) /4 = 2
+		covariance(x,y) = 1 / (4-1) [(1-1)(2-2) + (1-1)(2-2) + 1-1)(2-2) + (1-1)(2-2)] = 0
+		standard deviation(x) = sqrt[((1/(4-1)) * {(1-1)^2 +(1-1)^2 +(1-1)^2 +(1-1)^2}]
+				       = sqrt[(1/3) * 0] 
+		standard deviation(x) = 0
+		standard deviation(y) = sqrt[((1/(4-1))) * {(2-2)^2 + (2-2)^2 + (2-2)^2 + (2-2)^2}]
+				        = sqrt[(1/3) * 0]
+		standard deviation(y) = 0
+		corr(x,y) = 0/0 = undefined
+
+	Euclidean : -
+		d(x,y) = sqrt((1-2)^2 + (1-2)^2 + (1-2)^2 + (1-2)^2)
+		Euclidean distance = 2
+	
+--------------------------------------------------------------------------------------------------------------------------------------
+2.  x = (0, 1, 0, 1), y = (1, 0, 1, 0) cosine, correlation, Euclidean, Jaccard
+Ans. 
+	Cosine :- 
+		X. Y = 0*1 + 1*0 + 0*1 + 1*0 = 0
+		Size of x = sqrt(0*0 + 1*1 + 0*0 + 1*1) = sqrt(2)
+		Size of y = sqrt(1*1 + 0*0 + 1*1 + 0*0) = sqrt(2)
+		cos(x,y) = 0 / sqrt(2) * sqrt(2)
+		cos(x,y) = 0
+		
+	Correlation :- 
+		corr(x,y) = [covariance(x,y)] / [standard deviation(x) * standard deviation(y)]
+		Mean of x = (0+1+0+1) / 4 = ½ = 0.5
+		Mean of y = (1+0+1+0) /4 = ½ = 0.5
+		Covariance(x,y) = 1/(4-1) * [(0- ½ )(1- ½ ) + (1- ½ )(0- ½ ) + (0- ½ )(1- ½ ) + (1- ½ )(0- ½ )]
+		Covariance(x,y) = (1/3) * [(-1/4) + (-1/4) +(-1/4) +(-1/4)]
+		Covariance(x,y) = -1/3
+		standard deviation(x) = sqrt[((1/(4-1))) * {(1-1/2)^2 + (0-1/2)^2 + (1-1/2)^2 + (0-1/2)^2}]
+				        = sqrt[(1/3) * 1]
+		standard deviation(x) = 0.57735
+
+		standard deviation(y) = sqrt[((1/(4-1))) * {(0-1/2)^2 + (1-1/2)^2 + (0-1/2)^2 + (1-1/2)^2}]
+					        = sqrt[(1/3) * 1]
+       standard deviation(y) = 0.57735
+	corr(x,y) = -1/3 + (0.57735 * 0.57735)
+       corr(x,y) = -1
+       
+		Euclidean :-
+			d(x,y) = sqrt((0-1)^2 + (1-0)^2 + (0-1)^2 + (1-0)^2)
+			Euclidean distance = 2
+
+		Jaccard :-
+			Jaccard = (number of matching presences) / (number of attributes not involved in the 00 matches)
+ 	       		 J = (f11) / (f01 + f10  + f11)
+                       	 f01 = 2    the no. of attributes where x was 0 and y was 1
+	        	f10 = 2     the no. of attributes where x was 1 and y was 0
+	            	f00 = 0     the no. of attributes where x was 0 and y was 0
+	            	f11 = 0     the no. of attributes where x was 1 and y was 1
+
+	        	J = (0) / (2 + 2 + 0) 
+	        	J = 0
+---------------------------------------------------------------------------------------------------------------------------------------
+3.  x = (0,?1, 0, 1), y = (1, 0,?1, 0) cosine, correlation, Euclidean
+Ans.
+	Cosine :-
+		X. Y = 0*1 + (-1)*0 + 0*(-1) + 1*0 = 0
+		Size of x = sqrt(0*0 + (-1)*(-1) + 0*0 + 1*1) = sqrt(2)
+		Size of y = sqrt(1*1 + 0*0 + (-1)*(-1) + 0*0) = sqrt(2)
+		cos(x,y) = 0 / sqrt(2) * sqrt(2)
+		cos(x,y) = 0
+
+	Correlation :-
+		corr(x,y) = [covariance(x,y)] / [standard deviation(x) * standard deviation(y)]
+		Mean of x = (0+(-1)+0+1) / 4 = 0
+		Mean of y = (1+0+(-1)+0) / 4 = 0
+		Covariance(x,y) = 1/(4-1) * [(0-0)(1-0) + (-1-0)(0-0) + (0-0)(-1-0) + (1-0)(0-0)]
+			             = (1/3) * 0
+		Covariance(x,y) = 0
+
+		Standard deviation(x) = sqrt([1/4-1] * ((0-0)^2 +(-1-0)^2+ (0-0)^2 +(1-0)^2)
+				        = sqrt(0.333 * (0+1+0+1))
+				        = sqrt(0.666)
+		Standard deviation(x) = 0.816
+
+		Standard deviation(x) = sqrt([1/4-1] * ((1-0)^2 +(0-0)^2+ (-1-0)^2 +(0-0)^2)
+				        = sqrt(0.333 * (1+0+1+0))
+				        = sqrt(0.666)
+		Standard deviation(x) = 0.816
+		Corr(x,y) = 0/(0.816*0.816)
+		Corr(x,y) =0
+
+	Euclidean :-
+		d(x,y) = sqrt((0-1)^2 + (-1-0)^2 + (0+1)^2 + (1-0)^2)
+		Euclidean distance = 2
+
+--------------------------------------------------------------------------------------------------------------------------------------
+4. x = (1, 1, 0, 1, 0, 1), y = (1, 1, 1, 0, 0, 1) cosine, correlation, Jaccard
+Ans.
+	Cosine :-
+		X. Y = 1*1 + 1*1 + 0*1 + 1*0 + 0*0 + 1*1 = 3
+		Size of x = sqrt(1*1 + 1*1 + 0*0 + 1*1 + 0*0 + 1*1) = 2
+		Size of y = sqrt(1*1 + 1*1 + 1*1 + 0*0 + 0*0 + 1*1) = 2	
+		cos(x,y) = (3) / (2*2)
+		cos(x,y) = ¾ = 0.75
+
+	correlation : - 
+		corr(x,y) = [covariance(x,y)] / [standard deviation(x) * standard deviation(y)]
+		Mean of x = (1+1+0+1+0+1) / 6 = 4/6
+		Mean of y = (1+1+1+0+0+1) / 6 = 4/6
+		Covariance(x,y) = 1/(6-1) * [(1-4/6)(1-4/6) + (1-4/6)(1-4/6) + (0-4/6)(1-4/6) + (1-4/6)(0-4/6) + (0-4/6)(0-4/6) + (1-4/6)(1-4/6)] = (1/5)(1/3) = 1/15
+		Standard deviation(x) = sqrt[((1/(6-1))) * {(1-4/6)^2 + (1-4/6) ^2 + (0-4/6)^2 + (1-4/6) ^2 + (0-4/6)^2 + (1-4/6) ^2}] = sqrt[(1/5) * (4/3)] = 0.5164
+		Standard deviation(x) = 0.5164
+
+		Standard deviation(y) = sqrt[((1/(6-1))) * {(1-4/6)^2 + (1-4/6) ^2 + (1-4/6)^2 + (0-4/6) ^2 + (0-4/6)^2 + (1-4/6) ^2}] = sqrt[(1/5) * (4/3)] = 0.5164
+		Standard deviation(y) = 0.5164
+
+		Corr(x,y) = (1/15) / (0.5164 * 0.5164)
+		Corr(x,y) = 0.25
+
+	Jaccard :-
+Jaccard = (number of matching presences) / (number of attributes not involved in the 00 matches)
+ 	       		 J = (f11) / (f01 + f10  + f11)
+                       	f01 = 1    the no. of attributes where x was 0 and y was 1
+	        	f10 = 1     the no. of attributes where x was 1 and y was 0
+	            	f00 = 1     the no. of attributes where x was 0 and y was 0
+	            	f11 = 3     the no. of attributes where x was 1 and y was 1
+
+	        	J = (3) / (1 + 1 + 3) 
+	        	J = 3/5 = 0.6
+	
+
+5. x = (2,?1, 0, 2, 0,?3), y = (?1, 1,?1, 0, 0,?1) cosine and correlation
+Ans. 
+	Cosine : - 
+		X. Y = 2*(-1) + (-1)*1  + 0*(-1) + 2*0 + 0*0 + (-3)*(-1) = 0
+		Size of x = sqrt(2*2 + (-1)(-1) + 0*0 + 2*2 + 0*0 + (-3)*(-3)) = sqrt(18)
+		Size of y = sqrt((-1)*(-1) + 1*1 + (-1)*(-1) + 0*0 + 0*0 + (-1)*(-1)) = 2
+		Cos(x,y) = 0 / (sqrt(18) *2)
+		Cos(x,y) = 0
+
+	Correlation : - 
+		Corr(x,y) = [covariance(x,y)] / [standard deviation(x) * standard deviation(y)]
+		Mean of x = (2+(-1) + 0 + 2 + 0 + (-3)) / 6 = 0 
+		Mean of y = ((-1)+1+(-1)+0+0+(-1)) / 6 = -1/6
+		Covariance(x,y) = 1/(6-1) * [(2-0)(-1+1/6) + (-1-0)(1+1/6) + (0-0)(-1+1/6) + (2-0)(0+1/6) + (0-0)(0+1/6) + (-3-0)(-1+1/6)] = (1/5) * 0 = 0
+		
+		Standard deviation(x) = sqrt([1/6-1] * ((2-0)^2 + (-1-0)^2 + (0-0)^2 + (2-0)^2 + (0-0)^2 + (-3-0) ^2) = sqrt(0.2 * (4+1+0+4+0+9)) = sqrt(0.2*18) = sqrt(3.6)
+		Standard deviation(x) = 1.89
+
+		Standard deviation(y) = sqrt([1/6-1] * ((-1-0)^2 + (1-0)^2 + (-1-0)^2 + (0-0)^2 + (0-0)^2 + (-1-0) ^2) = sqrt(0.2 * (1+1+1+0+0+1) = sqrt(0.2*4) = sqrt(0.8)
+		Standard deviation(y) = 0.894
+		
+		Corr(x,y) = 0/(1.89*0.894)
+		Corr(x,y) = 0
+
+
