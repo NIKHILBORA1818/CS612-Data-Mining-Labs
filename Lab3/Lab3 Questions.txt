@@ -1,0 +1,42 @@
+CS612 - Lab 3
+
+Q1: Do the follow Questions
+
+A)	Distinguish between noise and outliers. Be sure to consider the following questions.
+(a)	Is noise ever interesting or desirable? Outliers?
+(b)	Can noise objects be outliers?
+(c)	Are noise objects always outliers?
+(d)	Are outliers always noise objects?
+
+B)	Consider the following sets of values. For each set find the mean, Standard Deviation and Bias
+a.	Set A = {1.2, 0.87, 1.013, 1.0001, and 0.986},
+b.	Set B = {6.215, 6.23, 6.33, 6.001, and 6.123},
+c.	Set C = {8.222, 8.452, 8.0001, 8.201, and 8.111},
+d.	Set D = {12.205, 12.099, 12.103, 12.101, and 11.896}
+
+Question 2 – Working with Square Matrix (Programming Question)
+-	Write an object-oriented program in python that does the following:
+
+o	Create an object of the class called myMatrix and do the following:
+
+1)	N = get a size for a square matrix # enter 6 
+2)	Create an object call it myMatrix
+3)	M1 = myMatrix.GetMatrix(N, file1)
+4)	M2 = myMatrix.GetMatrix(N, file2)
+5)	Print M1
+6)	Print M2
+7)	M1_Multiply_M2 = myMatrix.Product(M1, M2)
+8)	Print M1_Multiply_M2
+9)	M1_DotMultiply_M2 = myMatrix.DotProduct(M1, M2)
+10)	Print M1_DotMultiply_M2
+11)	M1_Divde_M2 = myMatrix.Division(M1, M2)
+12)	Print M1_Divde_M2 (show it with at least 2 significant digits) 
+13)	Now change the content of the second matrix as follows (the changes are shown in the highlighted area) and run the program again as directed above. For any division by zero the value should be “undef” 
+
+123	21	320	140	512	160
+117	810	910	123	1210	220
+0	11	121	0	10	1120
+1090	222	111	124	1230	1140
+12150	0	2720	2118	2191	1310
+3110	11320	1301	3140	1210	3160
+
