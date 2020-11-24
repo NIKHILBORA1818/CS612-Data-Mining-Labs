@@ -1,0 +1,20 @@
+Nikhil Bora
+CS612 - Lab 4
+
+Question 1: Do the following questions
+
+1) Give at least two advantages to working with data stored in text files instead of in a binary format.
+Ans.  Text files can be easily modified, for eg. Using a text editor.
+         Text files are more portable than binary files, across both systems and programs.
+         Text files can be inspected easily by typing file with text editor.
+
+2) Can you think of a situation in which identification numbers would be useful for prediction? One example is  Student IDs are a good predictor of graduation date.
+Ans. SSN would be best eg. Social security number can be used as an identification number to identify the credit worthiness of a person by banking.
+
+3) An educational psychologist wants to use association analysis to analyze test results. The test consists of 100 questions with four possible answers each. 
+a. What type of attributes would you have, and 
+Ans. We have 100 question with 4 possible answers. Therefore in total we have 400 assymetric binary attributes.
+
+b. how many of them are there?
+Ans. 400 assymetric binary attributes.
+
