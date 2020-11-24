@@ -1,0 +1,37 @@
+CS612-Lab2
+
+Question1: Classify the following attributes as binary, discrete, or continuous. Also classify them as qualitative (nominal or ordinal) or quantitative (interval or ratio). Some cases may have more than one interpretation, so briefly indicate your reasoning if you think there may be some ambiguity.
+Example: Age in years. Answer: Discrete, quantitative, ratio 
+
+1.	Time in terms of AM or PM
+2.	Brightness as measured by a light meter.
+3.	Brightness as measured by people’s judgments: 
+4.	Angles as measured in degrees between 0◦ and 360: 
+5.	Bronze, Silver, and Gold medals as awarded at the Olympics. 
+6.	Number of patients in a hospital. 
+7.	Ability to pass light in terms of the following values: opaque, translucent, transparent. 
+8.	Military rank. 
+9.	Density of a substance in grams per cubic centimeter. 
+10.	Coat check number. (When you attend an event, you can often give your coat to someone who, in turn, gives you a number that you can use to claim your coat when you leave. 
+
+
+Question 2: You have been given a data file called “AlzheimerData.xlsx”. It is a matrix file with 25 rows (representing Drugs) and 16 columns (representing properties of the drug) for Alzheimer Disease to do data mining and create a model to predict if a drug can be used for Alzheimer disease or not. Step 1 is to clean the data. You are required to write a python program that does the following:
+-	OriginalMatrix = read the data from the file
+-	Print OriginalMatrix 
+-	Matrix1 = Use OriginalMatrix to remove the columns that only include Zero
+-	Print Matrix1
+-	Matrix2 = Use Matrix1 to remove the columns in which they have at least 5 cells which are junks (non-numbers). Otherwise, if they have less than 5 junk values, replace the junk values with zeros.
+-	Print Matrix2
+-	Matrix3 = Use Matrix2 to remove the rows in which they have at least 5 cells which are junks (non-numbers). Otherwise if they have less than 5 junk values, replace the junk values with zeros.
+-	Print Matrix3
+-	RescaledMatrix = Do Rescaling (Standardization) of Matrix3. 
+-	The code for Standardization is:
+	x_standarization = (x – mean(X)) / (StdDev(X))
+-	Print RescaledMatrix
+-	NormalizedMatrix = Normalize Matrix3. The code for normalization is:
+-	The code for Standardization is:
+	x_Normalization = (x – min(X)) / ((max(X) – min(X)))
+-	Print NormalizedMatrix
+
+
+
